@@ -1,7 +1,8 @@
 # ProjectRepo
  Istruzioni per l'uso dei seguenti File
 
-Questi files rappresentano un soluzione ad un problema molto fastidioso ovvero quando il nostro Indirizzo IP Pubblico cambia a seguito di un blackout oppure ad una disconessione causata dal nostro ISP e i servizi che offriamo risulteranno offline
+Questi files rappresentano un soluzione ad un problema molto fastidioso ovvero quando il nostro Indirizzo IP Pubblico 
+cambia a seguito di un blackout oppure ad una disconessione causata dal nostro ISP e i servizi che offriamo risulteranno offline
 Legenda File:
 -PublicIP.sh sara' il file che dovrete lanciare sempre 
 -i due file Java che insieme ai file zip contenenti le librerie vi serviranno per la compilazione e per creare i rispetitivi file jar 
