@@ -2,7 +2,7 @@
 
 Questi files rappresentano un soluzione ad un problema molto fastidioso ovvero quando il nostro Indirizzo IP Pubblico cambia a seguito di un blackout oppure 
 ad una disconessione causata dal nostro ISP e i servizi che offriamo risulteranno offline
-Legenda File:
+*Legenda File:
  -PublicIP.zip       archivio zippato contentente il file eseguibile del tool, una volta estratto sara' un file con estensione .sh eseguibile tramite il comando: bash PublicIP.sh 
  -UpdateAruba.zip    archivio zippato contentente il modulo di aggiornamento automatico dell'Indirizzo IP 
  -email.zip          archivio zippato contentente il modulo di invio email del cambiamento dell'Indirizzo IP a causa di disconessione o blackout
