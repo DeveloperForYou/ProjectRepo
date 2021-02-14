@@ -7,8 +7,7 @@ Il tool e' composto da questi tre pezzi:
                                         -UpdateAruba.zip    archivio zippato contentente il modulo di aggiornamento automatico dell'Indirizzo IP 
                                         -email.zip          archivio zippato contentente il modulo di invio email del cambiamento dell'Indirizzo IP a causa di disconessione o blackout
 Ubuntu 20.04 LTS:    aprire il terminale dalla Scrivania con tasto destro > Apri in terminale
-Ubuntu 20.04 Server: posizionarsi in /home/vostroutente con il comando: cd /home/vostroutente creare la cartella Scrivania con il comando mkdir Scrivania ed entrare nella nuova 
-cartella con il comando  cd Scrivania
+Ubuntu 20.04 Server: posizionarsi in /home/vostroutente con il comando: cd /home/vostroutente creare la cartella Scrivania con il comando mkdir Scrivania ed entrare nella nuova cartella con il comando  cd Scrivania
 -scaricare i 3 Archivi da GitHub:
       PublicIP.zip       wget https://github.com/DeveloperForYou/ProjectRepo/raw/main/ToolUpdateAruba/Linux/PublicIP.zip
       UpdateAruba.zip    wget https://github.com/DeveloperForYou/ProjectRepo/raw/4f101abe689b81223e7ae8553a2f41f00a8ec979/ToolUpdateAruba/Linux/UpdateAruba.zip
@@ -19,7 +18,7 @@ cartella con il comando  cd Scrivania
 -installare Java 13 tramite i comandi:                      sudo apt install openjdk-13-jdk-headless  e sudo apt install openjdk-13-jdk
 -installare Google Chrome tramite la successione di comandi:
                                                             wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-														    sudo dpkg -i google-chrome-stable_current_amd64.deb
+							    sudo dpkg -i google-chrome-stable_current_amd64.deb
 -installare Netbeans per aprire i package che conterranno i file .java da modificare e poi successivamente compilarli 
  per installare Netbeans digitare il comando: 
                                               sudo snap install netbeans --classic
@@ -41,6 +40,6 @@ procedere alla compilazione dei file java, i rispettivi eseguibili con estension
                                                                                                 sudo cp PIP.service  /lib/systemd/system/PIP.service
                                                                                                 systemctl daemon-reload
                                                                                                 sudo systemctl start PIP.timer 
-																							    sudo systemctl start PIP.service 
-																								sudo systemctl status PIP.timer
-																								sudo systemctl status PIP.service
+					  							sudo systemctl start PIP.service 				                                                                  
+												sudo systemctl status PIP.timer												                                        sudo systemctl status PIP.service
+ 																								
