@@ -35,7 +35,7 @@ cartelle dei pacchetti che avete estratto prima
 procedere alla compilazione dei file java utilizzando il pulsante con il martello e la scopa 
 i rispettivi eseguibili creati con estensione .jar li trovate nella cartella dist nelle rispettive cartelle dei pacchetti che avete estratto prima
 -modificare il file PublicIP.sh alle righe 19,27,28 inserendo il percorso di dove sono stati  creati i rispettivi file .jar  e salvate 
--lanciare il file PublicIP.sh tramite il comando bash DirectorydovesitrovailfilePublicIP/PublicIP.sh e se viene lanciato senza errori significa che e
+-lanciare il file PublicIP.sh tramite il comando bash DirectorydovesitrovailfilePublicIP/PublicIP.sh e se viene lanciato senza errori significa che tutto funziona!
 -demonizzare il tool per far si che venga eseguito automaticamente ogni 2 min tramite i comandi:
                                                                                                 sudo cp PIP.timer    /etc/systemd/system/PIP.timer
                                                                                                 sudo cp PIP.service  /lib/systemd/system/PIP.service
