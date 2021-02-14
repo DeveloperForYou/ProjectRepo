@@ -1,7 +1,7 @@
 ##########################VARIABILI##########################################################################################################
 ip=$(curl -s https://checkip.amazonaws.com)                 #IP pubblico attuale
 oip=""                                                      #IP pubblico precedente 
-data=$(date) 						      #data e ora attuale di sistema
+data=$(date) 						                        #data e ora attuale di sistema
 #####################INIZIO SCRIPT###########################################################################################################
 echo "############################################################################################"
 echo "###########Script automatico di verifica online sito web data e ora: "$data "#############"
