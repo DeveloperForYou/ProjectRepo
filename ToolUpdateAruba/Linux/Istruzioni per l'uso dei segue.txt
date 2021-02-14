@@ -1,0 +1,46 @@
+                                     Istruzioni per l'uso dei seguenti File
+Questi files rappresentano un soluzione ad un problema molto fastidioso ovvero quando il nostro Indirizzo IP Pubblico cambia a seguito di un blackout oppure 
+ad una disconessione causata dal nostro ISP e i servizi che offriamo risulteranno offline
+Legenda File:
+Il tool e' composto da questi tre pezzi:
+                                        -PublicIP.zip       archivio zippato contentente il file eseguibile del tool e i file per la demonizzazione
+                                        -UpdateAruba.zip    archivio zippato contentente il modulo di aggiornamento automatico dell'Indirizzo IP 
+                                        -email.zip          archivio zippato contentente il modulo di invio email del cambiamento dell'Indirizzo IP a causa di disconessione o blackout
+Ubuntu 20.04 LTS:    aprire il terminale dalla Scrivania con tasto destro > Apri in terminale
+Ubuntu 20.04 Server: posizionarsi in /home/vostroutente con il comando: cd /home/vostroutente creare la cartella Scrivania con il comando mkdir Scrivania ed entrare nella nuova 
+cartella con il comando  cd Scrivania
+-scaricare i 3 Archivi da GitHub:
+      PublicIP.zip       wget https://github.com/DeveloperForYou/ProjectRepo/raw/main/ToolUpdateAruba/Linux/PublicIP.zip
+      UpdateAruba.zip    wget https://github.com/DeveloperForYou/ProjectRepo/raw/4f101abe689b81223e7ae8553a2f41f00a8ec979/ToolUpdateAruba/Linux/UpdateAruba.zip
+      email.zip          wget https://github.com/DeveloperForYou/ProjectRepo/raw/4f101abe689b81223e7ae8553a2f41f00a8ec979/ToolUpdateAruba/Linux/email.zip	  
+-estrarre i tre file Zip nella Scrivania 
+-scaricare il WebDriver per GoogleChrome tramite il comando: wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip
+-estrarre anch'esso nella Scrivania 
+-installare Java 13 tramite i comandi:                      sudo apt install openjdk-13-jdk-headless  e sudo apt install openjdk-13-jdk
+-installare Google Chrome tramite la successione di comandi:
+                                                            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+														    sudo dpkg -i google-chrome-stable_current_amd64.deb
+-installare Netbeans per aprire i package che conterranno i file .java da modificare e poi successivamente compilarli 
+ per installare Netbeans digitare il comando: 
+                                              sudo snap install netbeans --classic
+avviarlo tramite il comando:                  netbeans											  
+-importare le librerie necessarie alla compilazione  tramite la sezione Libraries di Netbeans, i rispettivi file di libreria sono nella cartella lib nelle rispettive 
+cartelle dei pacchetti che avete estratto prima
+-modificare oppurtunamente i due file .java con Netbeans secondo questo schema: 
+ nel file email.java dovrete sostiture "tua_mail" e "tua_pass" con i vostri dati della vostra email e funziona solo se avete Gmail e avete disattivato l'accesso alle app meno sicure
+ nel file UpdateAruba.java sostuire "directoryDriver"  con il percorso dove avete estratto il driver per Google Chrome  e 
+  inserire i vostri dati di aruba nel metodo Login() precisamente :
+                     user.sendKeys("tuo_user@aruba.it");  //**********sostituire con il vostro username
+                     pass.sendKeys("");                   //*********sostituire con la vostra password 
+
+procedere alla compilazione dei file java, i rispettivi eseguibili con estensione .jar li trovate nella cartella dist nelle rispettive cartelle dei pacchetti che avete estratto prima
+-modificare il file PublicIP.sh alle righe 19,27,28 inserendo il percorso di dove sono stati  creati i rispettivi file .jar  e salvate 
+-lanciare il file PublicIP.sh tramite il comando bash DirectorydovesitrovailfilePublicIP/PublicIP.sh e se viene lanciato senza errori significa che e
+-demonizzare il tool per far si che venga eseguito automaticamente ogni 2 min tramite i comandi:
+                                                                                                sudo cp PIP.timer    /etc/systemd/system/PIP.timer
+                                                                                                sudo cp PIP.service  /lib/systemd/system/PIP.service
+                                                                                                systemctl daemon-reload
+                                                                                                sudo systemctl start PIP.timer 
+																							    sudo systemctl start PIP.service 
+																								sudo systemctl status PIP.timer
+																								sudo systemctl status PIP.service
