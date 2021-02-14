@@ -45,7 +45,7 @@ public class UpdateAruba {
      if(OS.contains("windows"))
        System.setProperty("webdriver.chrome.driver", "directoryDriver\\chromedriver.exe");//**sostituire directoryDriver con la directory in cui si trova il driver web che avete scaricato 
      else                                                                                 //**sostituire directoryDriver solo nella parte del vostro Sistema Operativo   
-       System.setProperty("webdriver.chrome.driver", +"directoryDriver//chromedriver");
+       System.setProperty("webdriver.chrome.driver", "directoryDriver//chromedriver");
      driver = new ChromeDriver();
     }
     
