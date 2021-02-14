@@ -42,4 +42,5 @@ i rispettivi eseguibili creati con estensione .jar li trovate nella cartella dis
                                                                                                 systemctl daemon-reload
                                                                                                 sudo systemctl start PIP.timer 
 					  							sudo systemctl start PIP.service 				                                                                  
-												sudo systemctl status PIP.timer												                                        sudo systemctl status PIP.service	
+												sudo systemctl status PIP.timer						                                                                                        
+                                                                                                sudo systemctl status PIP.service
