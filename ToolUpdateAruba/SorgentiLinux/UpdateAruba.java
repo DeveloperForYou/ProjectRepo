@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
- * @author Albe
+ * @author DeveloperForYou
  */
 public class UpdateAruba {
 
