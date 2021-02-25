@@ -10,8 +10,8 @@ Ubuntu 20.04 LTS:    aprire il terminale dalla Scrivania con tasto destro > Apri
 Ubuntu 20.04 Server: posizionarsi in /home/vostroutente con il comando: cd /home/vostroutente creare la cartella Scrivania con il comando mkdir Scrivania ed entrare nella nuova cartella con il comando  cd Scrivania
 -scaricare i 3 Archivi da GitHub:
       PublicIP.zip       wget https://github.com/DeveloperForYou/ProjectRepo/raw/main/ToolUpdateAruba/Linux/PublicIP.zip
-      UpdateAruba.zip    https://github.com/DeveloperForYou/ProjectRepo/raw/main/ToolUpdateAruba/Linux/UpdateAruba.zip
-      email.zip          wget https://github.com/DeveloperForYou/ProjectRepo/raw/4f101abe689b81223e7ae8553a2f41f00a8ec979/ToolUpdateAruba/Linux/email.zip	  
+      UpdateAruba.zip    wget https://github.com/DeveloperForYou/ProjectRepo/raw/main/ToolUpdateAruba/Linux/UpdateAruba.zip
+      email.zip          wget https://github.com/DeveloperForYou/ProjectRepo/blob/main/ToolUpdateAruba/Linux/email.zip	  
 -estrarre i tre file Zip nella Scrivania 
 -scaricare il WebDriver per GoogleChrome tramite il comando: wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip
 -estrarre anch'esso nella Scrivania 
