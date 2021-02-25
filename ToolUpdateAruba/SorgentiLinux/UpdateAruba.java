@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -46,7 +47,8 @@ public class UpdateAruba {
        System.setProperty("webdriver.chrome.driver", "directoryDriver\\chromedriver.exe");//**sostituire directoryDriver con la directory in cui si trova il driver web che avete scaricato 
      else                                                                                 //**sostituire directoryDriver solo nella parte del vostro Sistema Operativo   
        System.setProperty("webdriver.chrome.driver", "directoryDriver//chromedriver");
-     driver = new ChromeDriver();
+     ch.addArguments("--start-fullscreen");
+     driver = new ChromeDriver(ch);
     }
     
     public static void ConnettiAruba()
