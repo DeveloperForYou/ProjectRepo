@@ -22,6 +22,7 @@ else{
      java -jar /directory/email.jar "nome@dominio.com" "Si prega di sostituire il vecchio Indirizzo IP:"$oip" con il nuovo:  "$ip  "sito _non_online"
      java -jar /directory/UpdateAruba.jar $ip
 }
+pause
 #sostituire directory con il percorso effettitvo di dove si trovano i file, lasciare invariato il resto, il file fip.txt verra' creato nella directory attuale in caso 
 #si decida di modificare il percorso di creazione e' possbile farlo  
 
