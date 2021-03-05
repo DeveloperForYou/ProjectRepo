@@ -35,7 +35,7 @@ public class UpdateAruba {
      }                                                                            //**sostituire DirectoryDriver con la directory in cui si trova il driver web che avete scaricato
      else{                                                                                 //**sostituire DirectoryDriver solo nella parte del vostro Sistema Operativo   
          ch.setBinary("/usr/bin/google-chrome");
-         System.setProperty("webdriver.chrome.driver","/home/alberto/Scrivania/chromedriver");
+         System.setProperty("webdriver.chrome.driver","DirectoryChromeDriver/chromedriver");
      }
      driver = new ChromeDriver(ch);
      driver.manage().window().maximize();
