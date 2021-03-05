@@ -1,0 +1,34 @@
+                                     Istruzioni per l'uso dei seguenti File
+Questi files rappresentano un soluzione ad un problema molto fastidioso ovvero quando il nostro Indirizzo IP Pubblico cambia a seguito di un blackout oppure 
+ad una disconessione causata dal nostro ISP e i servizi che offriamo risulteranno offline
+Legenda File:
+Il tool e'composto da questi due pezzi:
+                                        -ExecuteWindows.ps1      file eseguibile del tool per Windows, si trova dentro l'archivio zippato
+                                        -UpdateAruba.zip         archivio zippato contentente il modulo di aggiornamento automatico dell'Indirizzo IP e la parte dedicata alla mail                                
+Aprire Windows PowerShell come amministratore e digitare Set-ExecutionPolicy Unrestricted per abilitare l'esecuzione degli script 
+-scaricare il file di cui abbiamo bisogno da GitHub con i comandi :
+                 UpdateAruba.zip       wget https://github.com/DeveloperForYou/ProjectRepo/raw/main/ToolUpdateArubaV2/UpdateAruba.zip -OutFile $home\Desktop\UpdateAruba.zip
+-estrarre il file Zip nel Desktop tramite WinRAR o WinZip 
+-scaricare il WebDriver per GoogleChrome tramite il comando: wget https://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_win32.zip -OutFile $home\Desktop\chromedriver_win32.zip
+-estrarre anch'esso nel Desktop 
+-scaricare Java 13 per Windows recandosi sul sito : https://www.oracle.com/java/technologies/javase/jdk13-archive-downloads.html
+-cliccare su jdk-13.0.2_windows-x64_bin.exe , accettare i termini e le condizioni e registrarsi al sito Oracle se non disponete di un account, 
+in caso contrario effettuare il login e partira' il download 
+-procedere all'installazione del file eseguibile del JDK 
+-scaricare l'utlima versione di Google Chrome dal sito ufficiale di Google ed installarlo                     
+-installare Netbeans per aprire il package che conterra' i file .java da modificare e poi successivamente compilarli 
+ per installare Netbeans occorre scaricarlo dal sito ufficiale: https://downloads.apache.org/netbeans/netbeans/12.2/Apache-NetBeans-12.2-bin-windows-x64.exe
+ installare il file eseguibile                                           											  
+-importare le librerie necessarie alla compilazione  tramite la sezione Libraries di Netbeans, i rispettivi file di libreria sono nella cartella lib nella 
+cartella del pacchetto che avete estratto prima
+-modificare oppurtunamente i due file .java con Netbeans secondo questo schema: 
+ nel file email.java dovrete sostiture "tua_mail" e "tua_pass" con i vostri dati della vostra email e funziona solo se avete Gmail e avete disattivato l'accesso alle app meno sicure
+ nel file UpdateAruba.java sostuire "directoryDriver"  con il percorso dove avete estratto il driver per Google Chrome  e 
+  inserire i vostri dati di aruba nel metodo Login() precisamente :
+                     user.sendKeys("tuo_user@aruba.it");  //**********sostituire con il vostro username
+                     pass.sendKeys("");                   //*********sostituire con la vostra password 
+procedere alla compilazione dei file java utilizzando il pulsante con il martello e la scopa 
+i rispettivi eseguibili creati con estensione .jar li trovate nella cartella dist nelle rispettive cartelle dei pacchetti che avete estratto prima
+-modificare il file ExecuteWindows.ps1 alle riga 3 inserendo il percorso di dove e' stato creato il file .jar  e salvate 
+-lanciare il file PublicIP.ps1 facendo tasto dx sul file e cliccando su esegui con PowerShell e se viene lanciato senza errori significa che tutto funziona!
+-il Tool sara' eseguito all'infinito
