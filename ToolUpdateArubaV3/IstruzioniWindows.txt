@@ -1,0 +1,29 @@
+                                                Istruzioni per l'uso dei seguenti File
+Questi files rappresentano un soluzione ad un problema molto fastidioso ovvero quando il nostro Indirizzo IP Pubblico cambia a seguito di un blackout oppure 
+ad una disconessione causata dal nostro ISP e i servizi che offriamo risulteranno offline
+Legenda File:
+Il tool e'composto da questi due pezzi:
+                                        -ExecuteWindows.ps1      file eseguibile del tool per Windows, si trova dentro l'archivio zippato
+                                        -UpdateAruba.zip         archivio zippato contentente il modulo di aggiornamento automatico dell'Indirizzo IP e la parte dedicata alla mail                                
+Aprire Windows PowerShell come amministratore e digitare Set-ExecutionPolicy Unrestricted per abilitare l'esecuzione degli script 
+-scaricare il file di cui abbiamo bisogno da GitHub con i comandi :
+                 UpdateAruba.zip       wget https://github.com/DeveloperForYou/ProjectRepo/raw/main/ToolUpdateArubaV3/UpdateAruba.zip -OutFile $home\PercorsoDoveSiPreferisceScaricare\UpdateAruba.zip
+-estrarre il file Zip dove preferite tramite WinRAR o WinZip 
+-scaricare il WebDriver per GoogleChrome tramite il comando: wget https://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_win32.zip -OutFile $home\Desktop\chromedriver_win32.zip
+-estrarre anch'esso nel Desktop 
+-scaricare Java 13 per Windows recandosi sul sito : https://www.oracle.com/java/technologies/javase/jdk13-archive-downloads.html
+-cliccare su jdk-13.0.2_windows-x64_bin.exe , accettare i termini e le condizioni e registrarsi al sito Oracle se non disponete di un account, 
+in caso contrario effettuare il login e partira' il download 
+-procedere all'installazione del file eseguibile del JDK 
+-scaricare l'utlima versione di Google Chrome dal sito ufficiale di Google ed installarlo                     
+-recarsi nella cartella dist e successivamente modificare i seguenti file properties:
+                                       ArubaCredenzial.properties : Inserire le vostre credenziali del dominio Aruba
+                                       DriverConfiguration.properties : inserire nella LinuxChromeDriverDirectory= la directory dove 
+                                                                        è stato estratto il file del driver di google chrome
+                                                                        Infine personalizzate a vostro piacimento la Global Configuration:
+                                                                     GlobalDriverOptions facoltativo, personalizza l'esecuzione del driver 
+                                                                    TimeFirstExecution è il tempo di schedulazione della prima esecuzione
+                                                                   TimeAllExecution è il tempo di schedulazione delle successive esecuzioni
+-modificare il file ExecuteWindows.ps1 alle riga 3 inserendo il percorso di dove e' stato creato il file .jar  e salvate 
+-lanciare il file PublicIP.ps1 dalla directory dist facendo tasto dx sul file e cliccando su esegui con PowerShell e se viene lanciato senza errori significa che tutto funziona!
+-il Tool sara' eseguito all'infinito
