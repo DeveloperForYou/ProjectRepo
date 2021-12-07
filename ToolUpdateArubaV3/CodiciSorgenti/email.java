@@ -1,5 +1,7 @@
 package updatearuba;
-        
+
+import updatearuba.Setting.LeggiDriverSetting;
+
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -31,8 +33,8 @@ import jakarta.mail.internet.MimeMultipart;
  **/
 
 public class email {
-    final String username="";
-    protected final String password="";
+    final String username=LeggiDriverSetting.;
+    protected final String password=LeggiDriverSetting.;
     private String da;
     private String body;
     private File a;
