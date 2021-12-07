@@ -77,6 +77,60 @@ public class LeggiDriverSetting {
         }
         return cli;
     }
+    
+    public static String getGmailMail() {
+        Properties prop = new Properties();
+        String mg = "";
+        try {
+            prop.load(new FileInputStream(getFileDriverSetting()));
+            String key ="MailGmail";
+            mg = prop.getProperty(key);
+            if(mg==null | mg.isEmpty()){
+                System.err.println("Errore di Configurazione "
+                       +"nella chiave:MailGmail che risulta mancante nel file "
+                       +getFileDriverSetting()
+                       + "-> Mail mancante ");
+                System.exit(1);
+                return null;
+            }  
+        } catch (FileNotFoundException ex) {
+             ex.printStackTrace();
+             System.exit(1);
+             return null;
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            System.exit(1);
+            return null;
+        }
+        return mg;
+    }
+    
+    public static String getGmailMail() {
+        Properties prop = new Properties();
+        String mp = "";
+        try {
+            prop.load(new FileInputStream(getFileDriverSetting()));
+            String key ="MailPassword";
+            mp = prop.getProperty(key);
+            if(mp==null | mp.isEmpty()){
+                System.err.println("Errore di Configurazione "
+                       +"nella chiave:MailPassword che risulta mancante nel file "
+                       +getFileDriverSetting()
+                       + "-> Mail Password mancante ");
+                System.exit(1);
+                return null;
+            }  
+        } catch (FileNotFoundException ex) {
+             ex.printStackTrace();
+             System.exit(1);
+             return null;
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            System.exit(1);
+            return null;
+        }
+        return mp;
+    }
 
     public static String[] getGlobalDriverOptions() {
         String[] option = null;
