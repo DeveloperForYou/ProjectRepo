@@ -83,11 +83,11 @@ public class LeggiDriverSetting {
         String mg = "";
         try {
             prop.load(new FileInputStream(getFileDriverSetting()));
-            String key ="MailGmail";
+            String key ="GmailMail";
             mg = prop.getProperty(key);
             if(mg==null | mg.isEmpty()){
                 System.err.println("Errore di Configurazione "
-                       +"nella chiave:MailGmail che risulta mancante nel file "
+                       +"nella chiave:GmailMail che risulta mancante nel file "
                        +getFileDriverSetting()
                        + "-> Mail mancante ");
                 System.exit(1);
@@ -105,16 +105,16 @@ public class LeggiDriverSetting {
         return mg;
     }
     
-    public static String getGmailMail() {
+    public static String getGmailPassword() {
         Properties prop = new Properties();
         String mp = "";
         try {
             prop.load(new FileInputStream(getFileDriverSetting()));
-            String key ="MailPassword";
+            String key ="GmailPassword";
             mp = prop.getProperty(key);
             if(mp==null | mp.isEmpty()){
                 System.err.println("Errore di Configurazione "
-                       +"nella chiave:MailPassword che risulta mancante nel file "
+                       +"nella chiave:GmailPassword che risulta mancante nel file "
                        +getFileDriverSetting()
                        + "-> Mail Password mancante ");
                 System.exit(1);
