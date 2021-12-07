@@ -1,4 +1,4 @@
-                                                Istruzioni per l'uso dei seguenti File
+                                                 Istruzioni per l'uso dei seguenti File
 Questi files rappresentano un soluzione ad un problema molto fastidioso ovvero quando il nostro Indirizzo IP Pubblico cambia a seguito di un blackout oppure 
 ad una disconessione causata dal nostro ISP e i servizi che offriamo risulteranno offline
 Legenda File:
@@ -24,6 +24,8 @@ in caso contrario effettuare il login e partira' il download
                                                                      GlobalDriverOptions facoltativo, personalizza l'esecuzione del driver 
                                                                     TimeFirstExecution è il tempo di schedulazione della prima esecuzione
                                                                    TimeAllExecution è il tempo di schedulazione delle successive esecuzioni
+                                                                   Inserire nella chiave GmailMail la vostra mail
+                                                                   Inserire nella chiave GmailPassword la vostra password
 -modificare il file ExecuteWindows.ps1 alle riga 3 inserendo il percorso di dove e' stato creato il file .jar  e salvate 
 -lanciare il file PublicIP.ps1 dalla directory dist facendo tasto dx sul file e cliccando su esegui con PowerShell e se viene lanciato senza errori significa che tutto funziona!
 -il Tool sara' eseguito all'infinito
