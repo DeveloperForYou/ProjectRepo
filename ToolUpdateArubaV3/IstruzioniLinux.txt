@@ -23,7 +23,9 @@ Ubuntu 20.04 Server: posizionarsi in /home/vostroutente con il comando: cd /home
                                                                         Infine personalizzate a vostro piacimento la Global Configuration:
                                                                      GlobalDriverOptions facoltativo, personalizza l'esecuzione del driver 
                                                                     TimeFirstExecution è il tempo di schedulazione della prima esecuzione
-                                                                   TimeAllExecution è il tempo di schedulazione delle successive esecuzioni 
+                                                                    TimeAllExecution è il tempo di schedulazione delle successive esecuzioni 
+                                                                   Inserire nella chiave GmailMail la vostra email                                 
+                                                                   Inserire nella chiave GmailPassword la vostra password
 -modificare il file ExecuteLinux.sh alla riga 3 inserendo il percorso di dove sono presenti i rispettivi file .jar  e salvate 
 -lanciare il file ExecuteLinux.sh  dalla directory dist tramite il comando bash DirectoryDoveSiTrovaIlFileExecuteLinux/ExecuteLinux.sh e se viene lanciato senza errori significa che tutto funziona!
 -Il Tool verra' eseguito all'infinito 
