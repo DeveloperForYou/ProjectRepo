@@ -33,8 +33,8 @@ import jakarta.mail.internet.MimeMultipart;
  **/
 
 public class email {
-    final String username=LeggiDriverSetting.;
-    protected final String password=LeggiDriverSetting.;
+    private final String username=LeggiDriverSetting.getGmailMail();
+    protected final String password=LeggiDriverSetting.getGmailPassword();
     private String da;
     private String body;
     private File a;
