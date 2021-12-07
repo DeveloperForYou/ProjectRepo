@@ -16,7 +16,7 @@ Aprire Windows PowerShell come amministratore e digitare Set-ExecutionPolicy Unr
 in caso contrario effettuare il login e partira' il download 
 -procedere all'installazione del file eseguibile del JDK 
 -scaricare l'utlima versione di Google Chrome dal sito ufficiale di Google ed installarlo                     
--recarsi nella cartella dove avete estratto il file zippato/Setting e successivamente modificare i seguenti file properties:
+-recarsi nella cartella dove avete estratto il file zippato poi dentro Setting e successivamente modificare i seguenti file properties:
                                        ArubaCredenzial.properties : Inserire le vostre credenziali del dominio Aruba
                                        DriverConfiguration.properties : inserire nella LinuxChromeDriverDirectory= la directory dove 
                                                                         è stato estratto il file del driver di google chrome
