@@ -4,6 +4,7 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+
 import java.util.Properties;
 
 import jakarta.activation.DataHandler;
@@ -30,8 +31,8 @@ import jakarta.mail.internet.MimeMultipart;
  **/
 
 public class email {
-    final String username="spotted.spiaggetta@gmail.com";
-    protected final String password="niccoloferrigno";
+    final String username="";
+    protected final String password="";
     private String da;
     private String body;
     private File a;
