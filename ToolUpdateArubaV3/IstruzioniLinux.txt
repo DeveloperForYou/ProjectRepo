@@ -16,7 +16,7 @@ Ubuntu 20.04 Server: posizionarsi in /home/vostroutente con il comando: cd /home
 -installare Google Chrome tramite la successione di comandi:
                                                             wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
                                                             sudo dpkg -i google-chrome-stable_current_amd64.deb
--recarsi nella cartella dist e successivamente modificare i seguenti file properties:
+-recarsi nella cartella dove avete estratto il file zippato poi dentro Setting e successivamente modificare i seguenti file properties:
                                        ArubaCredenzial.properties : Inserire le vostre credenziali del dominio Aruba
                                        DriverConfiguration.properties : inserire nella LinuxChromeDriverDirectory= la directory dove 
                                                                         è stato estratto il file del driver di google chrome
